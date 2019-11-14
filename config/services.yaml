@@ -1,0 +1,18 @@
+parameters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '../src/App/*'
+        exclude: '../src/App/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
+
+    App\Controller\:
+        resource: '../src/App/Controller'
+        tags: ['controller.service_arguments']
+
+    App\Repository\:
+        resource: '../src/App/Repository/*'
+        tags: ['doctrine.repository_service']

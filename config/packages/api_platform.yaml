@@ -1,0 +1,18 @@
+api_platform:
+    title: API
+    version: 1.0.0
+    graphql:
+        graphql_playground:
+            enabled: true
+    mapping:
+        paths:
+        - '%kernel.project_dir%/src/App/Entity'
+        - '%kernel.project_dir%/config/api_platform'
+    patch_formats:
+        json: ['application/merge-patch+json']
+    formats:
+        json: ['application/json']
+        html: ['text/html']
+        graphql: ['application/json']
+    swagger:
+        versions: [3]

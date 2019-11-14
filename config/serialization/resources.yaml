@@ -1,0 +1,15 @@
+App\Entity\Book:
+    attributes:
+        id:
+            groups: ['Book']
+        title:
+            groups: ['Book']
+        pages:
+            groups: ['Book']
+
+App\Entity\Page:
+    attributes:
+        id:
+            groups: ['Book']
+        content:
+            groups: ['Book']

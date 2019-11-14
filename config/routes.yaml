@@ -1,0 +1,3 @@
+graphql_playground:
+    path: /docs/graphql_playground
+    controller: api_platform.graphql.action.graphql_playground

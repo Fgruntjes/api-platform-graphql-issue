@@ -1,0 +1,31 @@
+App\Entity\Book:
+    collectionOperations: ~
+    itemOperations: ~
+    attributes:
+        normalization_context:
+            groups: ['Book']
+        denormalization_context:
+            groups: ['Book']
+    properties:
+        id:
+            readonly: true
+        title:
+            required: true
+        pages:
+            subresource:
+                resourceClass: 'App\Entity\Page'
+                collection: true
+
+App\Entity\Page:
+    collectionOperations: ['get']
+    itemOperations: ['get']
+    attributes:
+        normalization_context:
+            groups: ['Book']
+        denormalization_context:
+            groups: ['Book']
+    properties:
+        id:
+            readonly: true
+        content:
+            required: true
